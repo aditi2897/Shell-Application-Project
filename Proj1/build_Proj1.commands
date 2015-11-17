@@ -1,0 +1,9 @@
+gcc -g -pthread -c csapp.c
+gcc -g -c Proj1.c
+gcc -g -c Proj1ListUtils.c
+gcc -pthread -o Proj1 Proj1.o Proj1ListUtils.o csapp.o
+gcc -pthread -o sample sample.c
+gcc -pthread -o sample1 sample1.c
+gcc -pthread -o sample2 sample2.c
+gcc -pthread -o sample3 sample3.c
+gcc -pthread -o sample4 sample4.c

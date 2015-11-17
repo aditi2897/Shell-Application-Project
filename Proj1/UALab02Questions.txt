@@ -1,0 +1,62 @@
+Examine csapp.c
+What is better about using Fork( ) instead of fork( )?
+(Use your editor's search feature; learn it if necessary!)
+Answer: Fork() is a error handling wrapper it handles errors unlike fork which only creates child processes.
+
+What does the unix_error( ) function do?
+Answer: unix_error() funciton is a error-reporting function which returns the error message with the 
+error number.
+
+
+Temporarilly disable #include "csapp.h" by putting // right before #.  Run the
+compile command gcc -g -pthread -c csapp.c.  Briefly, what sort of errors occur?
+Answer:
+It gives undeclared variables,file types,variables in functions as well as errors for all functions.
+
+Examine csapp.h.  When you use Bryant&O'Hallaron's syscall wrapper and Robust I/O (Rio) library, in which .c files must you use #include "csapp.h"
+Answer:( )It's optional.  ( )csapp.c only.  
+( )your files where wrapper or Rio functions are called only.
+(ans)both in csapp.c AND in your files were wrapper or Rio functions are called. 
+
+In your shell window, run man pthread_create.  View the section 3 page, not the
+section 3p one.  Want linker option must you use in a Gnu/Linux system when
+you building executables may call pthread_create or other pthread functions?
+Answer:The #include<pthread.h> should be included for calling pthread_create or other pthread functions. 
+
+
+Study the parseline( ) code of shellex.c.
+What causes the comment on char *delim; /* Points to the first space delimiter */
+to become true?
+Answer:
+( ) The fact that a local variable, allocated in the stack like delim,
+    has a garbage initial value.
+( ) The untrue assumption that local variables are initialized to 0.
+( ) The loop to /* Ignore leading spaces */
+(ans) The first time delim gets a non-garbage value is the first iteration of the
+    while ((delim = strchr( ... loop.
+( ) That entire while loop ALWAYS makes delim point to the first space delimiter.
+
+What is the best comment for char *delim;?
+Answer:
+( ) B&Os original /* Points to the first space delimiter */
+( ans) /* Points to the first and subsequent spaces right after tokens.
+
+
+Consult man strchr and copy the one line that documents succinctly what it does.
+Answer:  The strchr() function returns a pointer to the first occurrence of the character c in string s.
+
+
+After the space following the last token is replaced by the null character '\0',
+what is the value returned by the next call to strchr( )?
+Answer: 
+(ans ) 0 or NULL
+( ) a non-null pointer that points to a null ('\0') character. 
+
+Copy here the ACTUAL ONE LINE OF CODE that causes the C string consisting of 
+what the user inputted TO BE BROKEN UP into multiple C strings so the user
+input can be processed as a sequence of tokens.  Note that before the 
+tokenization, the input is stored with only one null character (0 or '\0') at
+its end.  After tokenization, additional null characters are stored into the
+character array after the logic detects the end of a token.
+Answer:
+char *delim= '\0'

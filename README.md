@@ -1,2 +1,10 @@
 # Shell Application Project
-Some of the parts of  Proj1.c and ProjUtils.c are implemented by me.
+Parts Implemented by me in Proj1.c 
+Incrementing  the popularity through list
+Use fork and exec in void run_program()
+
+Parts of ProjUtils.c  implemented by me
+Incrementing by Adding a program in according to the popularity
+void print_list()
+code for insertion and deletion depending on the popularity rearrenging in print_list()
+Priinting the list
